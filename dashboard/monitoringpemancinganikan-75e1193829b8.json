@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "monitoringpemancinganikan",
+  "private_key_id": "75e1193829b8ed0934f138c87699103eae457892",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC2lgyHUJ6Jq4I6\nKu4J1cZk/LE1Gk4A0YPXpbiAcWv+5yUicWYWbXVq5/I/85nnKDQmep9qriIMOlWR\n6y/4dCHefUkBKDM2YDVl/sy+HeF3ktkv0dPn66GAm67CUcijTBbyUFr277iEg2ef\nmpi63TgwcePsV5TALSPFLuTSFOhLZfRozNmgA8dLXHivkFlH7BUaJnnxY0TBQVBc\nwbOp9RAxJU8U5PLVIj6k3yuw1ugE5RC9qLUFEzkt/5wT4d1IAKScVwvf+o9kPCA0\ndabBsZ2pixN6eFlJj7CqhbjHf4w5LoqRDXntPE7/hZFNyX6/PNM1N+XAZPEFyztF\ntbppyDr1AgMBAAECggEAHHXcIxWCeNQmmvmJHDhZ0fD/kFb21LLT2b/nuAG2A0g1\nZh6F+rX6KP1ZqfVHRpxiMKNJiR/2h7BqGTIvSouTofImeIszHGU3vZvPf0z6EaDu\nwMD0xoBYrsrVnU2ROD8Kjp/O5hHs0Z8H/n1jFDGaaha+n97w/Vmr6zcJjOOcZ/AL\nk+tRJGxwH4UJRtb+cB+Fb2h7zVwdUnBTRQWrczYIh8yma8gwrMwV6l2cYcO7Bmme\ny7MeC689mNT3EUDfJpboRyEhJMwTNSVhCSGgJHFumqyzz4dAofRrnB8U/UReWE+v\nws2fMA95UNbwRkHaCxr316x/5/hDwenx9QIGRrmuKwKBgQDc46uJPf6/yu5HrDIA\n7KfskncMjdB1i6ykB04fSXkOGFCM3boxS72jFA23OsNCOYSerVg1ebHDEzKdY+Pf\nCB25Y06j12Ed1gVvh+dFfPab0jYavRCqRi7/1VZ5Gd2iXnv9/WjN3mIQW3tmfIvE\nKjWq2KJNyrAmH75TeIgccC2CqwKBgQDTm8MMpv7DXV4YdR8WO53Ve6vJ0GLKO8q8\nHOSGiMTJ7eYbbj76/960/YCnyYLU10bN00VD5Omq7eRKZpFpKAPtFr2Ydrt//Alm\n+PKJqdVBnbYd74LE+RoOwaVA2OoiLAqSBwwbeFNppfm5ndo+7MM4r0YNIN4ixFPA\n0mdV6Ko43wKBgHl86qKAK3W3Ghjnd1UU1EMER1/rO6T63kgVEH2avm7nJp5jcP2d\n574i0GxfcHcjBXL0ahh3RzLAg00XXIQVhauqF917Hxn21WSDPcr1MPmAw2svY1QT\nZ9QjtPzEIickilOmpZbc4diXSCaVB5YrlPrTTWk1um4tdVOZblsdw5ojAoGBAJqz\nPR162LWrBKeMuHVgkDsKdsTL++0tWUG9PbS9OGEH8zoKlzCY7xASZIRF5cgEulav\nJexE5i94S3W5FoVyI6yo+2MDKoCemaEWTvollyqpSgMInumx00MGfvGxoznoSLIJ\nROiwRwrttGvm4y8tmGtQeD4Q0VVJgpFtQO6lcgyxAoGBAJFP7mUfhUJlMvmZ5xsk\nlcVp4OOdIsp7bnr8VE6gc6fUwbz0cA07cniW51k7gj9v2u8AU0sSsyizVeGG+fJk\n8ZYi7A1N6j5Owd7UG/kcdfjuELRXleF8drh00WGojAtv00v8ms+8vK0L2o5az09I\nECGhjE6WnqJk5++YWXVTLCj0\n-----END PRIVATE KEY-----\n",
+  "client_email": "monitoringpemancinganikan@appspot.gserviceaccount.com",
+  "client_id": "107908710339794220654",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/monitoringpemancinganikan%40appspot.gserviceaccount.com"
+}
