@@ -1,6 +1,6 @@
 <?php 
 include_once('../head.php');
-$result = mysqli_query($con, "SELECT * FROM ph ORDER BY waktu ASC");
+$result = mysqli_query($con, "SELECT * FROM record ORDER BY waktu ASC");
 $waktu = array();
 $ph = array();
 $suhuAir = array();
