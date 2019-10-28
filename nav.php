@@ -81,7 +81,7 @@
                         <li class="nav-item" align="">
                             <a class="nav-link" href="#">
                                 <p style="color: rgb(45,45,45); font-weight: bold">
-                                    Anda Login Sebagai: ADMIN
+                                    Anda Login Sebagai: Admin
                                 </p>
                             </a>
                         </li>
