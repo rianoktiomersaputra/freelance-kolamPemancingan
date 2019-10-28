@@ -6,14 +6,14 @@ date_default_timezone_set('Asia/Jakarta');
 session_start();
 
 //membuat koneksi ke database
-$con = mysqli_connect('localhost', 'root', '', 'isnan');
+$con = mysqli_connect('localhost', 'root', '', 'kolamPemancingan');
 if(mysqli_connect_errno()){
     echo mysqli_connect_error();
 }
 
 //fungsi untuk membuat base_url
 function base_url($url = null){
-    $base_url = "http://localhost/isnan";
+    $base_url = "http://localhost/kolamPemancingan";
     if($url != null){
         return $base_url."/".$url;
     } else {
