@@ -25,6 +25,7 @@
                                             <th class="text-center">No</th>
                                             <th class="text-center">Username</th>
                                             <th class="text-center">Password</th>
+                                            <th class="text-center">Aksi</th>
                                         </thead>
                                         <tbody> 
                                             <?php
@@ -41,9 +42,7 @@
                                                     
                                                     <td class="text-center">
                                                             <a href="ubah.php?id=<?=$data['id']?>" class="btn btn-warning btn-round btn-icon btn-icon-mini btn-neutral"><i class="now-ui-icons design-2_ruler-pencil"></i></a>
-                                                    </td>
-                                                            
-                                                    <td class="text-center">
+                                                
                                                         <a href="hapus.php?id=<?=$data['id']?>" class="btn btn-danger btn-round btn-icon btn-icon-mini btn-neutral" onclick="return confirm('Yakin akan menghapus data?')"><i class="now-ui-icons ui-1_simple-remove"></i></a>
                                                     </td>
                                                 </tr>
