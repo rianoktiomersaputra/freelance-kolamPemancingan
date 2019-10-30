@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2019 at 04:27 PM
+-- Generation Time: Oct 30, 2019 at 03:35 PM
 -- Server version: 10.3.15-MariaDB
 -- PHP Version: 7.3.6
 
@@ -19,16 +19,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `isnan`
+-- Database: `kolampemancingan`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ph`
+-- Table structure for table `record`
 --
 
-CREATE TABLE `ph` (
+CREATE TABLE `record` (
   `id` int(11) NOT NULL,
   `waktu` date NOT NULL,
   `ph` float NOT NULL,
@@ -37,10 +37,10 @@ CREATE TABLE `ph` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `ph`
+-- Dumping data for table `record`
 --
 
-INSERT INTO `ph` (`id`, `waktu`, `ph`, `suhu`, `tingkatgaram`) VALUES
+INSERT INTO `record` (`id`, `waktu`, `ph`, `suhu`, `tingkatgaram`) VALUES
 (1, '2019-10-28', 7, 20.1, 2),
 (2, '2019-10-27', 7.2, 20.8, 2.3),
 (3, '2019-10-29', 6.8, 18.9, 1.8);
@@ -69,9 +69,9 @@ INSERT INTO `user` (`id`, `username`, `password`) VALUES
 --
 
 --
--- Indexes for table `ph`
+-- Indexes for table `record`
 --
-ALTER TABLE `ph`
+ALTER TABLE `record`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -85,9 +85,9 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `ph`
+-- AUTO_INCREMENT for table `record`
 --
-ALTER TABLE `ph`
+ALTER TABLE `record`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
