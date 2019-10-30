@@ -23,6 +23,7 @@
                                     <table class="table" id="tabel_pegawai">
                                         <thead style="color:#2BAAA1">
                                             <th class="text-center">No</th>
+                                            <th class="text-center">Email</th>
                                             <th class="text-center">Username</th>
                                             <th class="text-center">Password</th>
                                             <th class="text-center">Aksi</th>
@@ -35,6 +36,7 @@
                                                 while($data = mysqli_fetch_array($sql)) { ?>
                                                 <tr>
                                                     <td class="text-center"><?=$no++?></td>
+                                                    <td><?=$data['email']?></td>
                                                     <td><?=$data['username']?></td>
                                                     <td><?=$data['password']?></td>
 

@@ -1,12 +1,12 @@
 <?php 
 include_once('../head.php');
-$result = mysqli_query($con, "SELECT * FROM record ORDER BY waktu ASC");
+$result = mysqli_query($con, "SELECT * FROM record WHERE waktu BETWEEN ADDDATE(CURDATE(), INTERVAL -14 DAY) AND CURDATE() ORDER BY waktu ASC LIMIT 14");
 $waktu = array();
 $ph = array();
 $suhuAir = array();
 $garam = array();
-while($data = mysqli_fetch_array($result)){
-    $waktu[] = $data['waktu'];
+while($data = mysqli_fetch_assoc($result)){
+    $waktu[] = substr($data['waktu'],8,2) . "-" . substr($data['waktu'],5,2) . "-" . substr($data['waktu'],0,4);
     $ph[] = floatval($data['ph']);
     $suhuAir[] = floatval($data['suhu']);
     $garam[] = floatval($data['tingkatgaram']);

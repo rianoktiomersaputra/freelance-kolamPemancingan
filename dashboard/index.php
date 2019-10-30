@@ -4,6 +4,12 @@
     require_once("../PHPMailer/src/PHPMailer.php");
     require_once("../PHPMailer/src/SMTP.php");
 
+    //Untuk ngambil data emali dari database (dibentuk dalam array)
+    $result = mysqli_query($con, "SELECT email FROM user");
+    $targetMail = [];
+    while ($email = mysqli_fetch_row($result)){
+        $targetMail[] = $email[0];
+    };
     use Carbon\Carbon;
     // use PHPMailer\PHPMailer;
 
@@ -11,30 +17,29 @@
 
     if($_COOKIE['statusPH'] == "true" || $_COOKIE['statusSuhu'] == "true" || $_COOKIE['statusGaram'] == "true"){
         // notificatio message dari javascript
-        $mail = new PHPMailer\PHPMailer\PHPMailer();
-        $mail->isSMTP();
-        $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'ssl';
-        $mail->Host = 'smtp.gmail.com';
-        $mail->Port = '465';
-        $mail->isHTML();
-        $mail->Username = 'isnaenim05@gmail.com';
-        $mail->Password = 'promild16';
-        $mail->SetFrom('no-reply@howcode.org');
-        $mail->Subject = 'Peringatan';
-        $mail->Body = $_COOKIE['message'];
-        $mail->AddAddress('isnaenim05@gmail.com');
 
-        $mail->send();
+        //Perulangan untuk ngirim email ke semua user
+        for($i=0; $i< mysqli_num_rows($result); $i++){
+            $mail[$i] = new PHPMailer\PHPMailer\PHPMailer();
+            $mail[$i]->isSMTP();
+            $mail[$i]->SMTPAuth = true;
+            $mail[$i]->SMTPSecure = 'ssl';
+            $mail[$i]->Host = 'smtp.gmail.com';
+            $mail[$i]->Port = '465';
+            $mail[$i]->isHTML();
+            $mail[$i]->Username = 'isnaenim05@gmail.com';
+            $mail[$i]->Password = 'promild16';
+            $mail[$i]->SetFrom('no-reply@howcode.org');
+            $mail[$i]->Subject = 'Peringatan';
+            $mail[$i]->Body = $_COOKIE['message'];
+            $mail[$i]->AddAddress($targetMail[$i]);
+            $mail[$i]->send();
+        }
     }
 
 ?>
 
-
-
 <!-- <script src="indexdash.js"></script> -->
-
-
 <body id="dasboard">
     <div class="wrapper ">
 

@@ -9,6 +9,7 @@ use Ramsey\Uuid\Exception\UnsatisfiedDependencyException;
 ?><div class="content"> <?php
 
 if(isset($_POST['tambah'])){
+    $email = trim(mysqli_real_escape_string($con, $_POST['email']));
     $username = trim(mysqli_real_escape_string($con, $_POST['username']));
     $password = sha1(trim(mysqli_real_escape_string($con, $_POST['password'])));
     
@@ -17,7 +18,7 @@ if(isset($_POST['tambah'])){
     if (mysqli_num_rows($sql) > 0) {
         echo '<script language="javascript">swal({text: "Username telah digunakan!",icon: "warning", dangerMode: "true"}).then(() => { window.location.href="tambah.php" });</script>';
     }else {
-        $query = mysqli_query($con, "INSERT INTO user VALUES ('','$username', '$password')") or die (mysqli_error($con));
+        $query = mysqli_query($con, "INSERT INTO user VALUES ('', '$email' ,'$username', '$password')") or die (mysqli_error($con));
         if($query){
             echo '<script language="javascript">swal({text: "Data Pegawai Berhasil Ditambahkan",icon: "success"}).then(() => { window.location.href="beranda.php" });</script>';
         } else {

@@ -1,72 +1,5 @@
 <?php require_once('../head.php'); ?>
 
-<script type="text/javascript">
-    function valid(){
-        if(isNaN(tambahpegawai.nopeg.value)){
-            swal({text: "Format Nomor Pegawai Salah", icon: "warning"});
-            tambahpegawai.nopeg.focus();
-            return false;
-        }
-        if(tambahpegawai.nopeg.value == ""){
-            swal({text: "Nomor Pegawai Harus Diisi", icon: "warning"});
-            tambahpegawai.nopeg.focus();
-            return false;
-        }
-        if((tambahpegawai.nopeg.value).length < 6){
-            swal({text: "Nomor Pegawai Harus Sesuai", icon: "warning"});
-            tambahpegawai.nopeg.focus();
-            return false;
-        }
-        if(tambahpegawai.nama.value == ""){
-            swal({text: "Nama Pegawai Harus Diisi", icon: "warning"});
-            tambahpegawai.nama.focus();
-            return false;
-        }
-        if(tambahpegawai.jeniskelamin.value == ""){
-            swal({text: "Jenis Kelamin Pegawai Harus Diisi", icon: "warning"});
-            tambahpegawai.jeniskelamin.focus();
-            return false;
-        }
-        if(tambahpegawai.bagian.value == "a"){
-            swal({text: "Bagian Pegawai Harus Diisi", icon: "warning"});
-            tambahpegawai.bagian.focus();
-            return false;
-        }
-        if(tambahpegawai.alamat.value == ""){
-            swal({text: "Alamat Pegawai Harus Diisi", icon: "warning"});
-            tambahpegawai.alamat.focus();
-            return false;
-        }
-        if(tambahpegawai.nohp.value == ""){
-            swal({text: "Nomor HP Pegawai Harus Diisi", icon: "warning"});
-            tambahpegawai.nohp.focus();
-            return false;
-        }
-        if(isNaN(tambahpegawai.nohp.value)){
-            swal({text: "Format Nomor HP Pegawai Salah", icon: "warning"});
-            tambahpegawai.nohp.focus();
-            return false;
-        }
-        if((tambahpegawai.nohp.value).length < 11){
-            swal({text: "Nomor HP Pegawai Harus Sesuai", icon: "warning"});
-            tambahpegawai.nohp.focus();
-            return false;
-        }
-        if(tambahpegawai.username.value == ""){
-            swal({text: "Username Pegawai Harus Diisi", icon: "warning"});
-            tambahpegawai.username.focus();
-            return false;
-        }
-        if(tambahpegawai.password.value == ""){
-            swal({text: "Password Pegawai Harus Diisi", icon: "warning"});
-            tambahpegawai.password.focus();
-            return false;
-        }
-
-        return true;
-    }
-</script>
-
 <body id="data_pegawai">
     
     <div class="wrapper ">
@@ -88,6 +21,13 @@
                                 <form name="tambahpegawai" action="proses.php" method="post">       
                                 <div class="row" style="margin-left: 150px;">
                                         
+                                    <div class="col-md-3 pr-2">
+                                        <div class="form-group">
+                                            <label>Email </label><label style="color: red">*</label>
+                                            <input name="email" type="text" class="form-control" placeholder=" ... " required>
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-3 pr-2">
                                         <div class="form-group">
                                             <label>Username </label><label style="color: red">*</label>
