@@ -30,7 +30,79 @@
 
 ?>
 
-<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+
+
+<!-- <script src="indexdash.js"></script> -->
+
+
+<body id="dasboard">
+    <div class="wrapper ">
+
+        <?php include_once('../nav.php'); ?>
+
+    	<div class="panel-header panel-header-sm" style="padding-bottom: 10%">
+            <div class="header text-center">
+                <h6 class="title" style="color: rgb(45,45,45); font-weight: bold;">Halaman Utama</h6>
+               
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="col-md-12"> 
+                    <div class="card" style="height:750px">
+                        <div class="card-header">
+                            <h4 class="card-title">Data Realtime</h4>
+                        </div>
+
+                        <div class="card-body" style="margin-bottom: 30px">
+                        <style>
+                            .circle {
+                            height: 200px;
+                            width: 200px;
+                            background-color: green;
+                            border-radius: 50%;
+                            margin-left:40px;
+                            }
+                            .circle1 {
+                                margin-top:-185px;
+                                margin-left:55px;
+                            height: 170px;
+                            width: 170px;
+                            background-color: white;
+                            border-radius: 50%;
+                            text-align: center;
+                            vertical-align: middle;
+                            line-height: 170px;
+                            font-size: 40px;
+                            }
+                        </style>
+                        <div class="row text-center" style="padding-top: 25vmin;">
+                        <div class="col-md-4">
+                            <label style="font-size:30px; color:black; font-weight: normal">PH Air </label>
+                            <div class="circle"></div>
+                            <div class="circle1" id="phAir">0</div>
+                            <h3 id="ph"></h3> <span>%</span>
+                        </div>
+                        <div class="col-md-4">
+                            <label style="font-size:30px; color:black; font-weight: normal">Suhu Air </label>
+                            <div class="circle"></div>
+                            <div class="circle1" id="suhuAir">0</div>
+                            <h3 id="suhu"></h3>
+                        </div>
+                        <div class="col-md-4">
+                            <label style="font-size:30px; color:black; font-weight: normal">Tingkat Garam </label>
+                            <div class="circle"></div>
+                            <div class="circle1" id="garam">0</div>
+                            <h3 id="tds"></h3>
+                        </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+         </div>
+
+         <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
 <script src="indexdash.js"></script>
 
@@ -114,73 +186,3 @@ $(document).ready(function() {
 
 
 </script>
-
-<!-- <script src="indexdash.js"></script> -->
-
-
-<body id="dasboard">
-    <div class="wrapper ">
-
-        <?php include_once('../nav.php'); ?>
-
-    	<div class="panel-header panel-header-sm" style="padding-bottom: 10%">
-            <div class="header text-center">
-                <h6 class="title" style="color: rgb(45,45,45); font-weight: bold;">Halaman Utama</h6>
-               
-            </div>
-        </div>
-
-        <div class="content">
-            <div class="row">
-                <div class="col-md-12"> 
-                    <div class="card" style="height:750px">
-                        <div class="card-header">
-                            <h4 class="card-title">Data Realtime</h4>
-                        </div>
-
-                        <div class="card-body" style="margin-bottom: 30px">
-                        <style>
-                            .circle {
-                            height: 200px;
-                            width: 200px;
-                            background-color: green;
-                            border-radius: 50%;
-                            margin-left:40px;
-                            }
-                            .circle1 {
-                                margin-top:-185px;
-                                margin-left:55px;
-                            height: 170px;
-                            width: 170px;
-                            background-color: white;
-                            border-radius: 50%;
-                            text-align: center;
-                            vertical-align: middle;
-                            line-height: 170px;
-                            font-size: 40px;
-                            }
-                        </style>
-                        <div class="row text-center" style="padding-top: 25vmin;">
-                        <div class="col-md-4">
-                            <label style="font-size:30px; color:black; font-weight: normal">PH Air </label>
-                            <div class="circle"></div>
-                            <div class="circle1" id="phAir">0</div>
-                            <h3 id="ph"></h3> <span>%</span>
-                        </div>
-                        <div class="col-md-4">
-                            <label style="font-size:30px; color:black; font-weight: normal">Suhu Air </label>
-                            <div class="circle"></div>
-                            <div class="circle1" id="suhuAir">0</div>
-                            <h3 id="suhu"></h3>
-                        </div>
-                        <div class="col-md-4">
-                            <label style="font-size:30px; color:black; font-weight: normal">Tingkat Garam </label>
-                            <div class="circle"></div>
-                            <div class="circle1" id="garam">0</div>
-                            <h3 id="tds"></h3>
-                        </div>
-                        </div>
-                    </div>
-                 </div>
-             </div>
-         </div>
