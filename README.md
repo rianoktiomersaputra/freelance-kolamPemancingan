@@ -12,3 +12,5 @@
     3. (-) Pas loading di dashboard, lambat karena harus ngirim email ke seluruh user yang terdaftar (Aku bikin 3 user tadi, vendor emailnya ngasih warning "too_much_take_respond", gimana kalo 10 user ato lebih ?) 
     4, (?) Saran aku sesuaiin dulu maunya email yang nerima itu seluruh user ato user yang login aja ?
 
+- Update (16/11/2019) :
+    1. (+) Menambahkan fitur untuk menambahkan data keadaan air ke database yang digunakan untuk diproses pada fitur laporan
