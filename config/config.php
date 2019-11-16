@@ -13,7 +13,7 @@ if(mysqli_connect_errno()){
 
 //fungsi untuk membuat base_url
 function base_url($url = null){
-    $base_url = "http://localhost/freelance/kolamPemancingan";
+    $base_url = "http://localhost/kolamPemancingan";
     if($url != null){
         return $base_url."/".$url;
     } else {

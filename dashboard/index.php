@@ -131,9 +131,9 @@
                             </div>
                             <div class="mx-0" id="inputDatabase">
                                 <form action="" method="post">
-                                    <input type="number" id="phAir" name="phAir" value=7 hidden>
-                                    <input type="number" id="suhuAir" name="suhuAir" value=16 hidden>
-                                    <input type="number" id="tGaram" name="tGaram" value=1.3 hidden>
+                                    <input type="text" id="phAir1" name="phAir" hidden>
+                                    <input type="text" id="suhuAir1" name="suhuAir" hidden>
+                                    <input type="text" id="tGaram" name="tGaram" hidden>
                                     <div class="mx-auto">
                                         <button type="submit" name="update" class="btn btn-primary">Update
                                             today!</button>
@@ -153,29 +153,25 @@
 
             <!-- Awal dari script ngambil nilai firebase -->
             <script>
+                var mainApp = {};
                 $(document).ready(function () {
+                    var ph = document.getElementById('ph');
+                    var a = document.getElementById('phAir1');
+                    var phSensor = firebase.database().ref().child('ph');
+                    phSensor.on('value', snap => a.value = snap.val());
 
+                    var tds = document.getElementById('tds');
+                    var b = document.getElementById('tGaram');
+                    var garamSensor = firebase.database().ref().child('tds');
+                    garamSensor.on('value', snap => b.value = snap.val());
+
+                    var suhu = document.getElementById('suhu');
+                    var c = document.getElementById('suhuAir1');
+                    var suhuSensor = firebase.database().ref().child('suhu');
+                    suhuSensor.on('value', snap => c.value = snap.val());
                     // Awal bagian ini yang diganti !!!
-                    var firebaseRefPh = firebase.database().ref("ph");
-                    firebaseRefPh.on('value', snap => {
-                        var ph = snap.val();
-                    });
-                    var firebaseRefSuhu = firebase.database().ref("suhu");
-                    firebaseRefSuhu.on('value', snap => {
-                        var suhu = snap.val();
-                    });
-                    var firebaseRefGaram = firebase.database().ref("garam");
-                    firebaseRefGaram.on('value', snap => {
-                        var garam = snap.val();
-                    });
-                    // Akhir bagian yang diganti !!!
 
-                    // var firebaseRefSuhu = firebase.database().ref("suhu");
-                    // var firebaseRefGaram = firebase.database().ref("garam");
-                    $.get('ajax/keadaanair.php/?phAir=' + ph + '&suhuAir=' + suhu + '&tGaram=' + garam,
-                        function (data) {
-                            $('#inputDatabase').html(data);
-                        });
+                    // Akhir bagian yang diganti !!!
                 });
             </script>
             <!-- Akhir dari script-->
