@@ -19,7 +19,7 @@ while($data = mysqli_fetch_assoc($result)){
         <div class="panel-header panel-header-sm">
         </div>
         <div class="content">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header">
@@ -27,10 +27,45 @@ while($data = mysqli_fetch_assoc($result)){
                         </div>
                         <div class="card-body">
                             <div class="row">
-
                                 <div class="col-3-md" id = "ph" style = "width: 550px; height: 400px; margin: 0 auto"></div>
                                 <div class="col-3-md" id = "suhuAir" style = "width: 550px; height: 400px; margin: 0 auto"></div>
                                 <div class="col-3-md" id = "garam" style = "width: 550px; height: 400px; margin: 0 auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table" id="tabel_grafik_kunjungan">
+                                    <thead class=" text-primary">
+                                        <th class="text-center">No</th>
+                                        <th class="text-center">Tanggal</th>
+                                        <th class="text-center">PH Air</th>
+                                        <th class="text-center">Suhu Air</th>
+                                        <th class="text-center">Kadar Garam Air</th>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $no = 1;
+                                        $query = mysqli_query($con, "SELECT * FROM record ORDER BY waktu");
+                                        if(mysqli_num_rows($query) > 0 ){
+                                            while($data = mysqli_fetch_array($query)) { ?>
+                                            <tr>
+                                                <td class="text-center"><?= $no++; ?></td>
+                                                <td class="text-center"><?= $data['waktu'] ?></td>
+                                                <td class="text-center"><?= $data['ph'] ?></td>
+                                                <td class="text-center"><?= $data['suhu'] ?></td>
+                                                <td class="text-center"><?= $data['tingkatgaram'] ?></td>
+                                            </tr>
+                                            <?php }
+                                        } else {
+                                            echo "<tr><td colspan=\"3\" align=\"center\">Data Tidak Ditemukan</td></tr>";
+                                        }
+                                        ?>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
