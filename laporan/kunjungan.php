@@ -38,7 +38,7 @@ while($data = mysqli_fetch_assoc($result)){
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table" id="tabel_grafik_kunjungan">
+                                <table class="table" id="tabel_grafik_kunjungan99">
                                     <thead class=" text-primary">
                                         <th class="text-center">No</th>
                                         <th class="text-center">Tanggal</th>
@@ -73,7 +73,11 @@ while($data = mysqli_fetch_assoc($result)){
             </div>
         </div>
     </div>
-
+    
+    <script>
+        $('#tabel_grafik_kunjungan99').DataTable({
+        });
+    </script>
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src = "https://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript">
